@@ -1,4 +1,4 @@
-package com.eiswaldnative;
+package dev.wolkeneis.eiswaldnative;
 
 import com.facebook.react.ReactActivity;
 
