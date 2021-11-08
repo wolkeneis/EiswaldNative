@@ -377,7 +377,7 @@ const EpisodeList = () => {
   };
 
   return (
-    <View>
+    <View style={styles.episodeList}>
       {playlist &&
         seasons &&
         availabilities &&
@@ -420,7 +420,7 @@ const EpisodeList = () => {
           </View>
         )}
       <ScrollView>
-        <List.Section style={styles.episodeList} title="Episodes">
+        <List.Section style={styles.episodes} title="Episodes">
           {playlist &&
             seasons &&
             availabilities &&
@@ -572,6 +572,7 @@ export default Watch;
 const styles = StyleSheet.create({
   watchScreen: {
     marginTop: 4,
+    flex: 1,
   },
   videoContainer: {
     margin: 16,
@@ -613,6 +614,9 @@ const styles = StyleSheet.create({
     marginTop: 22,
   },
   episodeList: {
+    flex: 1,
+  },
+  episodes: {
     margin: 16,
   },
   deleteModal: {
