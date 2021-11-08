@@ -29,17 +29,18 @@ const VideoControls = ({
   const orientation = useDeviceOrientation();
   const timeout = useRef();
 
+  const fullscreenRef = useRef(onFullscreen ? onFullscreen : () => {});
+  const exitFullscreenRef = useRef(
+    onExitFullscreen ? onExitFullscreen : () => {},
+  );
+
   useEffect(() => {
     if (orientation === 'landscape') {
-      if (onFullscreen) {
-        onFullscreen();
-      }
+      fullscreenRef.current();
     } else if (orientation === 'portrait') {
-      if (onExitFullscreen) {
-        onExitFullscreen();
-      }
+      exitFullscreenRef.current();
     }
-  }, [orientation, onFullscreen, onExitFullscreen]);
+  }, [orientation]);
 
   useEffect(() => {
     Animated.timing(fadeAnimation, {
