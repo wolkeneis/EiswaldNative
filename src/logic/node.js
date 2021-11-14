@@ -1,6 +1,7 @@
 import englandIcon from '../media/england.png';
 import germanyIcon from '../media/germany.png';
 import japanIcon from '../media/japan.png';
+import chinaIcon from '../media/china.png';
 import {blobToBase64, wrapPromise} from './utils';
 
 const fetchNodeState = origin => {
@@ -116,6 +117,8 @@ function languageIndexImage(language) {
     ? japanIcon
     : `${language}` === '2'
     ? englandIcon
+    : `${language}` === '3'
+    ? chinaIcon
     : undefined;
 }
 
