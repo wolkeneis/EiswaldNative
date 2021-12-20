@@ -36,7 +36,6 @@ function fetchProfile() {
       {
         method: 'POST',
         credentials: 'include',
-        redirect: 'manual',
       },
     ),
   )
@@ -58,7 +57,6 @@ function logout() {
       {
         method: 'DELETE',
         credentials: 'include',
-        redirect: 'manual',
       },
     ),
   )
@@ -75,7 +73,6 @@ function fetchProfileConnections() {
       {
         method: 'POST',
         credentials: 'include',
-        redirect: 'manual',
       },
     ),
   )
@@ -94,7 +91,6 @@ function updatePrivacy(privateProfile) {
       {
         method: 'POST',
         credentials: 'include',
-        redirect: 'manual',
         headers: {
           'Content-Type': 'application/json',
         },

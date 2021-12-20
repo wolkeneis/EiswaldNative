@@ -5,7 +5,7 @@ import {ActivityIndicator, Button} from 'react-native-paper';
 import Login from './Login';
 import NodeLogin from './NodeLogin';
 import NodeSettings from './NodeSettings';
-import ProfileSettins from './ProfileSettings';
+import ProfileSettings from './ProfileSettings';
 
 const Stack = createNativeStackNavigator();
 
@@ -45,7 +45,7 @@ const SettingsScreen = ({navigation}) => {
 const ProfileScreen = ({navigation}) => {
   return (
     <Suspense fallback={<ActivityIndicator size="large" />}>
-      <ProfileSettins navigation={navigation} />
+      <ProfileSettings navigation={navigation} />
     </Suspense>
   );
 };
@@ -85,10 +85,11 @@ export default Settings;
 
 const styles = StyleSheet.create({
   settingsScreen: {
-    marginTop: 8,
+    paddingVertical: 8,
   },
   settingButton: {
-    margin: 8,
+    marginVertical: 8,
+    marginHorizontal: 16,
     padding: 16,
   },
 });

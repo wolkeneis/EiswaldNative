@@ -25,6 +25,7 @@ const fetchPlaylists = node => {
   return fetch(node.origin + '/content/playlists/', {
     importance: 'high',
     credentials: 'include',
+    redirect: 'manual',
   });
 };
 
@@ -32,6 +33,7 @@ function fetchPlaylist(node, key) {
   return fetch(node.origin + '/content/playlist/' + key, {
     importance: 'high',
     credentials: 'include',
+    redirect: 'manual',
   });
 }
 
@@ -40,8 +42,8 @@ function fetchThumbnail(node, key) {
     fetch(
       new Request(node.origin + '/content/thumbnail/' + key, {
         importance: 'low',
-        redirect: 'manual',
         credentials: 'include',
+        redirect: 'manual',
       }),
     )
       .then(response => response.blob())

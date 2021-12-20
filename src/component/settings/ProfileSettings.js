@@ -186,8 +186,12 @@ const Connection = ({navigation, provider, connection}) => {
 export default ProfileSettings;
 
 const styles = StyleSheet.create({
+  settings: {
+    marginVertical: 4,
+  },
   profileCard: {
-    margin: 8,
+    marginVertical: 4,
+    marginHorizontal: 8,
   },
   cardContent: {
     flexDirection: 'row',
